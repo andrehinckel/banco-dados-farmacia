@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace View
 {
-    public partial class Form1 : Form
+    public partial class CadastroComestiveis : Form
     {
-        public Form1()
+        public CadastroComestiveis()
         {
             InitializeComponent();
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
