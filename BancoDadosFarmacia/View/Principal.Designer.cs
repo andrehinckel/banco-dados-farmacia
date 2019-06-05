@@ -53,6 +53,7 @@
             this.btnCadastroProdutosHigienicos.TabIndex = 1;
             this.btnCadastroProdutosHigienicos.Text = "Cadastro Produtos Higiênicos";
             this.btnCadastroProdutosHigienicos.UseVisualStyleBackColor = true;
+            this.btnCadastroProdutosHigienicos.Click += new System.EventHandler(this.btnCadastroProdutosHigienicos_Click);
             // 
             // btnRemedios
             // 

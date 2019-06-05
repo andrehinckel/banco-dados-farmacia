@@ -22,5 +22,11 @@ namespace View
             TabelaComestiveis cadastro = new TabelaComestiveis();
             cadastro.ShowDialog();
         }
+
+        private void btnCadastroProdutosHigienicos_Click(object sender, EventArgs e)
+        {
+            CadastroRemedios cadastro = new CadastroRemedios();
+            cadastro.ShowDialog();
+        }
     }
 }
