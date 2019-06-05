@@ -15,4 +15,5 @@ namespace Model
         public decimal Quantidade;
         public string Marca;
     }
+   
 }

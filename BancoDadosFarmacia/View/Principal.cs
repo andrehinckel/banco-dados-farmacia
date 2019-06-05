@@ -19,7 +19,7 @@ namespace View
 
         private void btnCadastroComestiveis_Click(object sender, EventArgs e)
         {
-            CadastroComestiveis cadastro = new CadastroComestiveis();
+            TabelaComestiveis cadastro = new TabelaComestiveis();
             cadastro.ShowDialog();
         }
     }

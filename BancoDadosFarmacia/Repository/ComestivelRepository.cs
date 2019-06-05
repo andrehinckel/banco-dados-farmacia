@@ -79,6 +79,7 @@ namespace Repository
             connection.Open();
 
             SqlCommand command = new SqlCommand();
+            command.Connection = connection;
             command.CommandText = "INSERT INTO comestiveis(nome, valor, data_vencimento, quantidade, marca) VALUES (@NOME, @VALOR, @DATA_VENCIMENTO, @QUANTIDADE, @MARCA)";
             command.Parameters.AddWithValue("@NOME", comestivel.Nome);
             command.Parameters.AddWithValue("@VALOR", comestivel.Valor);
@@ -113,10 +114,11 @@ namespace Repository
             command.Connection = connection;
             command.CommandText = @"UPDATE comestiveis SET nome = @NOME, valor = @VALOR, data_vencimento = @DATA_VENCIMENTO, quantidade = @QUANTIDADE, marca = @MARCA WHERE id = @ID";
             command.Parameters.AddWithValue("@NOME", comestivel.Nome);
-            command.Parameters.AddWithValue("@VALOR", comestivel.Valor;
+            command.Parameters.AddWithValue("@VALOR", comestivel.Valor);
             command.Parameters.AddWithValue("@DATA_VENCIMENTO", comestivel.DataVencimento);
             command.Parameters.AddWithValue("@QUANTIDADE", comestivel.Quantidade);
             command.Parameters.AddWithValue("@MARCA", comestivel.Marca);
+            command.Parameters.AddWithValue("@ID", comestivel.Id);
             command.ExecuteNonQuery();
             connection.Close();
         }
