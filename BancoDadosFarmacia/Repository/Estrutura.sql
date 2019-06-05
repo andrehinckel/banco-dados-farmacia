@@ -10,9 +10,10 @@ CREATE TABLE comestiveis(
 DROP TABLE remedios;
 CREATE TABLE remedios(
 	id INT PRIMARY KEY IDENTITY(1,1),
+	generico BIT,
 	nome VARCHAR(100),
 	categoria VARCHAR(100),
-	solido VARCHAR(100),
+	solido BIT,
 	contra_indicacoes VARCHAR(200),
 	bula VARCHAR(500),
 	faixa VARCHAR(50),
