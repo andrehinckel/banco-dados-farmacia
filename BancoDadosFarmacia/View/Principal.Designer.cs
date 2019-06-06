@@ -64,6 +64,7 @@
             this.btnRemedios.TabIndex = 2;
             this.btnRemedios.Text = "Cadastro Remédios";
             this.btnRemedios.UseVisualStyleBackColor = true;
+            this.btnRemedios.Click += new System.EventHandler(this.btnRemedios_Click);
             // 
             // Principal
             // 

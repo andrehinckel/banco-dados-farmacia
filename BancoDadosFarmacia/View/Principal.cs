@@ -25,8 +25,13 @@ namespace View
 
         private void btnCadastroProdutosHigienicos_Click(object sender, EventArgs e)
         {
-            CadastroRemedios cadastro = new CadastroRemedios();
-            cadastro.ShowDialog();
+        }
+
+        private void btnRemedios_Click(object sender, EventArgs e)
+        {
+            TabelaCadastroRemedios tabelaCadastroRemedios = new TabelaCadastroRemedios();
+            tabelaCadastroRemedios.ShowDialog();
+
         }
     }
 }

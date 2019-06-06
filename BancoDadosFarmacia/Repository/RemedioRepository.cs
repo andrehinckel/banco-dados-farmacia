@@ -36,12 +36,14 @@ namespace Repository
                 Remedio remedio = new Remedio();
                 remedio.Id = Convert.ToInt32(row["id"]);
                 remedio.Nome = row["nome"].ToString();
+                remedio.Generico = Convert.ToBoolean(row["generico"]);
                 remedio.Categoria = row["categoria"].ToString();
-                remedio.Solido = Convert.ToBoolean(row["solido]");
+                remedio.Solido = Convert.ToBoolean(row["solido"]);
                 remedio.ContraIndicacoes = row["contra_indicacoes"].ToString();
                 remedio.Bula = row["bula"].ToString();
                 remedio.Faixa = row["faixa"].ToString();
                 remedio.PrecisaReceita = Convert.ToBoolean(row["precisa_receita"]);
+                remedios.Add(remedio);
             }
             connection.Close();
             return remedios;
@@ -64,10 +66,11 @@ namespace Repository
             connection.Close();
             if(table.Rows.Count == 1)
             {
-                DataRow row = table.Rows[i];
+                DataRow row = table.Rows[0];
                 Remedio remedio = new Remedio();
                 remedio.Id = Convert.ToInt32(row["id"]);
                 remedio.Nome = row["nome"].ToString();
+                remedio.Generico = Convert.ToBoolean(row["generico"]);
                 remedio.Categoria = row["categoria"].ToString();
                 remedio.Solido = Convert.ToBoolean(row["solido"].ToString());
                 remedio.ContraIndicacoes = row["contra_indicacoes"].ToString();
@@ -87,9 +90,17 @@ namespace Repository
 
             SqlCommand command = new SqlCommand();
             command.Connection = connection;
-            command.CommandText = @"INSERT INTO remedios (nome, categoria, solido
-contra_indicacoes, bula, faixa, precisa_receita) VALUES (@NOME, @CATEGORIA, @SOLIDO
-@CONTRA_INDICACOES, @BULA, @FAIXA, @PRECISA_RECEITA";
+            command.CommandText = @"INSERT INTO remedios (nome, generico, categoria, solido,
+contra_indicacoes, bula, faixa, precisa_receita) VALUES (@NOME, @GENERICO, @CATEGORIA, @SOLIDO,
+@CONTRA_INDICACOES, @BULA, @FAIXA, @PRECISA_RECEITA)";
+            command.Parameters.AddWithValue("@NOME", remedio.Nome);
+            command.Parameters.AddWithValue("@GENERICO", remedio.Generico);
+            command.Parameters.AddWithValue("@CATEGORIA", remedio.Categoria);
+            command.Parameters.AddWithValue("@SOLIDO", remedio.Solido);
+            command.Parameters.AddWithValue("@CONTRA_INDICACOES", remedio.ContraIndicacoes);
+            command.Parameters.AddWithValue("@BULA", remedio.Bula);
+            command.Parameters.AddWithValue("@FAIXA", remedio.Faixa);
+            command.Parameters.AddWithValue("@PRECISA_RECEITA", remedio.PrecisaReceita);
             command.ExecuteNonQuery();
             connection.Close();
         }
@@ -117,9 +128,18 @@ contra_indicacoes, bula, faixa, precisa_receita) VALUES (@NOME, @CATEGORIA, @SOL
 
             SqlCommand command = new SqlCommand();
             command.Connection = connection;
-            command.CommandText = @"UPDATE remedios SET nome = @ID, categoria = @CATEGORIA,
+            command.CommandText = @"UPDATE remedios SET nome = @NOME, categoria = @CATEGORIA,
 solido = @SOLIDO, contra_indicacoes = @CONTRA_INDICACOES, bula = @BULA, faixa = @FAIXA,
 precisa_receita = @PRECISA_RECEITA";
+            command.Parameters.AddWithValue("@NOME", remedio.Nome);
+            command.Parameters.AddWithValue("@GENERICO", remedio.Generico);
+            command.Parameters.AddWithValue("@CATEGORIA", remedio.Categoria);
+            command.Parameters.AddWithValue("@SOLIDO", remedio.Solido);
+            command.Parameters.AddWithValue("@CONTRA_INDICACOES", remedio.ContraIndicacoes);
+            command.Parameters.AddWithValue("@BULA", remedio.Bula);
+            command.Parameters.AddWithValue("@FAIXA", remedio.Faixa);
+            command.Parameters.AddWithValue("@PRECISA_RECEITA", remedio.PrecisaReceita);
+            command.Parameters.AddWithValue("@ID", remedio.Id);
             command.ExecuteNonQuery();
             connection.Close();
         }
