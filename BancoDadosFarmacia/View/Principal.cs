@@ -25,7 +25,8 @@ namespace View
 
         private void btnCadastroProdutosHigienicos_Click(object sender, EventArgs e)
         {
-
+            TabelaCadastroRemedios tabelaCadastroRemedios = new TabelaCadastroRemedios();
+            tabelaCadastroRemedios.ShowDialog();
         }
 
         private void btnRemedios_Click(object sender, EventArgs e)
