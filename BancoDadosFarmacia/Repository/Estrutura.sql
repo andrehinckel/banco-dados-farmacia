@@ -19,5 +19,10 @@ CREATE TABLE remedios(
 	faixa VARCHAR(50),
 	precisa_receita BIT 
 );
-
-SELECT * FROM remedios;
+DROP TABLE produtos_higienicos;
+CREATE TABLE produtos_higienicos(
+	id INT PRIMARY KEY IDENTITY(1,1),
+	nome VARCHAR(100),
+	preco DECIMAL(10,2),
+	categoria VARCHAR(70)
+);
