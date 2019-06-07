@@ -64,18 +64,6 @@
     <Compile Include="CadastroRemedios.Designer.cs">
       <DependentUpon>CadastroRemedios.cs</DependentUpon>
     </Compile>
-    <Compile Include="EditarCadastroComestiveis.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="EditarCadastroComestiveis.Designer.cs">
-      <DependentUpon>EditarCadastroComestiveis.cs</DependentUpon>
-    </Compile>
-    <Compile Include="EditarCadastroRemedios.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="EditarCadastroRemedios.Designer.cs">
-      <DependentUpon>EditarCadastroRemedios.cs</DependentUpon>
-    </Compile>
     <Compile Include="TabelaCadastroRemedios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,12 +98,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CadastroRemedios.resx">
       <DependentUpon>CadastroRemedios.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="EditarCadastroComestiveis.resx">
-      <DependentUpon>EditarCadastroComestiveis.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="EditarCadastroRemedios.resx">
-      <DependentUpon>EditarCadastroRemedios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TabelaCadastroRemedios.resx">
       <DependentUpon>TabelaCadastroRemedios.cs</DependentUpon>

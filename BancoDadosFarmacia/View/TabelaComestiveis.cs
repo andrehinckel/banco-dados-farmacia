@@ -64,12 +64,8 @@ namespace View
             ComestivelRepository repository = new ComestivelRepository();
             Comestivel comestivel = repository.ObterPeloID(id);
 
-            EditarCadastroComestiveis editarCadastro = new EditarCadastroComestiveis(comestivel);
-            editarCadastro.ShowDialog();
-            
-            
-            
-            
+            CadastroComestiveis cadastroComestiveis = new CadastroComestiveis(comestivel);
+            cadastroComestiveis.ShowDialog();
         }
 
         private void TabelaComestiveis_Activated(object sender, EventArgs e)

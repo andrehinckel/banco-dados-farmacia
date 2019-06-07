@@ -60,8 +60,8 @@ namespace View
             RemedioRepository repository = new RemedioRepository();
             Remedio remedio = repository.ObterPeloId(id);
 
-            EditarCadastroRemedios Cadastroeditar = new EditarCadastroRemedios(remedio);
-            Cadastroeditar.ShowDialog();
+            CadastroRemedios cadastroRemedios = new CadastroRemedios(remedio);
+            cadastroRemedios.ShowDialog();
         }
     }
 }

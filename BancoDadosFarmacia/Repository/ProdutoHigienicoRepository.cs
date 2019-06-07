@@ -62,7 +62,7 @@ namespace Repository
                 ProdutoHigienico produtoHigienico = new ProdutoHigienico();
                 produtoHigienico.Id = Convert.ToInt32(row["id"]);
                 produtoHigienico.Nome = row["nome"].ToString();
-                produtoHigienico.Preco = Convert.ToDecimal(row["decimal"]);
+                produtoHigienico.Preco = Convert.ToDecimal(row["preco"]);
                 produtoHigienico.Categoria = row["categoria"].ToString();
                 return produtoHigienico;
             }

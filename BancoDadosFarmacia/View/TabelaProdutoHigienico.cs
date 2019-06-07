@@ -36,7 +36,8 @@ namespace View
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
-
+            CadastroProdutosHigienicos cadastroProdutosHigienicos = new CadastroProdutosHigienicos();
+            cadastroProdutosHigienicos.ShowDialog();
         }
 
         private void btnApagar_Click(object sender, EventArgs e)
@@ -59,6 +60,9 @@ namespace View
 
             ProdutoHigienicoRepository repository = new ProdutoHigienicoRepository();
             ProdutoHigienico produtoHigienico = repository.ObterPeloID(id);
+
+            CadastroProdutosHigienicos cadastroProdutosHigienicos = new CadastroProdutosHigienicos(produtoHigienico);
+            cadastroProdutosHigienicos.ShowDialog();
         }
     }
 }

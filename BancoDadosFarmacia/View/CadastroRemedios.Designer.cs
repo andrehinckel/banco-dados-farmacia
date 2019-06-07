@@ -49,8 +49,10 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.Generico = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.rbGenericoSim = new System.Windows.Forms.RadioButton();
             this.rbGenericoNao = new System.Windows.Forms.RadioButton();
+            this.rbGenericoSim = new System.Windows.Forms.RadioButton();
+            this.txtCodigo = new System.Windows.Forms.TextBox();
+            this.lblCodigo = new System.Windows.Forms.Label();
             this.gbSolido.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -60,7 +62,7 @@
             // 
             this.lblNome.AutoSize = true;
             this.lblNome.Font = new System.Drawing.Font("BankGothic Md BT", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNome.Location = new System.Drawing.Point(4, 9);
+            this.lblNome.Location = new System.Drawing.Point(12, 60);
             this.lblNome.Name = "lblNome";
             this.lblNome.Size = new System.Drawing.Size(83, 25);
             this.lblNome.TabIndex = 0;
@@ -68,16 +70,17 @@
             // 
             // txtNome
             // 
-            this.txtNome.Location = new System.Drawing.Point(9, 38);
+            this.txtNome.Location = new System.Drawing.Point(17, 89);
             this.txtNome.Name = "txtNome";
             this.txtNome.Size = new System.Drawing.Size(254, 20);
             this.txtNome.TabIndex = 1;
+            this.txtNome.Leave += new System.EventHandler(this.txtNome_Leave);
             // 
             // lblCategoria
             // 
             this.lblCategoria.AutoSize = true;
             this.lblCategoria.Font = new System.Drawing.Font("BankGothic Md BT", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCategoria.Location = new System.Drawing.Point(4, 61);
+            this.lblCategoria.Location = new System.Drawing.Point(12, 112);
             this.lblCategoria.Name = "lblCategoria";
             this.lblCategoria.Size = new System.Drawing.Size(149, 25);
             this.lblCategoria.TabIndex = 2;
@@ -97,7 +100,7 @@
             // 
             this.lblContraIndicacoes.AutoSize = true;
             this.lblContraIndicacoes.Font = new System.Drawing.Font("BankGothic Md BT", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblContraIndicacoes.Location = new System.Drawing.Point(8, 121);
+            this.lblContraIndicacoes.Location = new System.Drawing.Point(16, 172);
             this.lblContraIndicacoes.Name = "lblContraIndicacoes";
             this.lblContraIndicacoes.Size = new System.Drawing.Size(264, 25);
             this.lblContraIndicacoes.TabIndex = 7;
@@ -105,7 +108,7 @@
             // 
             // txtContraIndicacoes
             // 
-            this.txtContraIndicacoes.Location = new System.Drawing.Point(9, 149);
+            this.txtContraIndicacoes.Location = new System.Drawing.Point(17, 200);
             this.txtContraIndicacoes.Multiline = true;
             this.txtContraIndicacoes.Name = "txtContraIndicacoes";
             this.txtContraIndicacoes.Size = new System.Drawing.Size(254, 44);
@@ -115,7 +118,7 @@
             // 
             this.lblBula.AutoSize = true;
             this.lblBula.Font = new System.Drawing.Font("BankGothic Md BT", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBula.Location = new System.Drawing.Point(9, 197);
+            this.lblBula.Location = new System.Drawing.Point(17, 248);
             this.lblBula.Name = "lblBula";
             this.lblBula.Size = new System.Drawing.Size(77, 25);
             this.lblBula.TabIndex = 9;
@@ -123,7 +126,7 @@
             // 
             // txtBula
             // 
-            this.txtBula.Location = new System.Drawing.Point(9, 225);
+            this.txtBula.Location = new System.Drawing.Point(17, 276);
             this.txtBula.Name = "txtBula";
             this.txtBula.Size = new System.Drawing.Size(254, 20);
             this.txtBula.TabIndex = 10;
@@ -132,7 +135,7 @@
             // 
             this.lblFaixa.AutoSize = true;
             this.lblFaixa.Font = new System.Drawing.Font("BankGothic Md BT", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFaixa.Location = new System.Drawing.Point(4, 249);
+            this.lblFaixa.Location = new System.Drawing.Point(12, 300);
             this.lblFaixa.Name = "lblFaixa";
             this.lblFaixa.Size = new System.Drawing.Size(82, 25);
             this.lblFaixa.TabIndex = 11;
@@ -151,7 +154,7 @@
             // btnSalvar
             // 
             this.btnSalvar.Font = new System.Drawing.Font("BankGothic Md BT", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalvar.Location = new System.Drawing.Point(197, 324);
+            this.btnSalvar.Location = new System.Drawing.Point(205, 375);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(140, 49);
             this.btnSalvar.TabIndex = 15;
@@ -193,7 +196,7 @@
             "Vermelha",
             "Amarela",
             "Branca"});
-            this.cbFaixa.Location = new System.Drawing.Point(9, 277);
+            this.cbFaixa.Location = new System.Drawing.Point(17, 328);
             this.cbFaixa.Name = "cbFaixa";
             this.cbFaixa.Size = new System.Drawing.Size(254, 25);
             this.cbFaixa.TabIndex = 18;
@@ -211,7 +214,7 @@
             "Genérico",
             "Referência",
             "Manipulado"});
-            this.cbCategoria.Location = new System.Drawing.Point(9, 85);
+            this.cbCategoria.Location = new System.Drawing.Point(17, 136);
             this.cbCategoria.Name = "cbCategoria";
             this.cbCategoria.Size = new System.Drawing.Size(254, 25);
             this.cbCategoria.TabIndex = 19;
@@ -245,7 +248,7 @@
             this.gbSolido.Controls.Add(this.rbSolidoSim);
             this.gbSolido.Controls.Add(this.rbSolidoNao);
             this.gbSolido.Controls.Add(this.lblSolido);
-            this.gbSolido.Location = new System.Drawing.Point(281, 225);
+            this.gbSolido.Location = new System.Drawing.Point(289, 276);
             this.gbSolido.Name = "gbSolido";
             this.gbSolido.Size = new System.Drawing.Size(254, 78);
             this.gbSolido.TabIndex = 22;
@@ -257,7 +260,7 @@
             this.groupBox2.Controls.Add(this.lblPrecisaReceita);
             this.groupBox2.Controls.Add(this.rbPrecisaReceitaSim);
             this.groupBox2.Controls.Add(this.rbPrecisaReceitaNao);
-            this.groupBox2.Location = new System.Drawing.Point(281, 31);
+            this.groupBox2.Location = new System.Drawing.Point(289, 82);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(254, 79);
             this.groupBox2.TabIndex = 23;
@@ -278,23 +281,11 @@
             this.groupBox1.Controls.Add(this.rbGenericoNao);
             this.groupBox1.Controls.Add(this.rbGenericoSim);
             this.groupBox1.Controls.Add(this.Generico);
-            this.groupBox1.Location = new System.Drawing.Point(281, 116);
+            this.groupBox1.Location = new System.Drawing.Point(289, 167);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(254, 83);
             this.groupBox1.TabIndex = 25;
             this.groupBox1.TabStop = false;
-            // 
-            // rbGenericoSim
-            // 
-            this.rbGenericoSim.AutoSize = true;
-            this.rbGenericoSim.Font = new System.Drawing.Font("BankGothic Md BT", 18.75F);
-            this.rbGenericoSim.Location = new System.Drawing.Point(10, 47);
-            this.rbGenericoSim.Name = "rbGenericoSim";
-            this.rbGenericoSim.Size = new System.Drawing.Size(76, 30);
-            this.rbGenericoSim.TabIndex = 26;
-            this.rbGenericoSim.TabStop = true;
-            this.rbGenericoSim.Text = "Sim";
-            this.rbGenericoSim.UseVisualStyleBackColor = true;
             // 
             // rbGenericoNao
             // 
@@ -308,11 +299,43 @@
             this.rbGenericoNao.Text = "Não";
             this.rbGenericoNao.UseVisualStyleBackColor = true;
             // 
+            // rbGenericoSim
+            // 
+            this.rbGenericoSim.AutoSize = true;
+            this.rbGenericoSim.Font = new System.Drawing.Font("BankGothic Md BT", 18.75F);
+            this.rbGenericoSim.Location = new System.Drawing.Point(10, 47);
+            this.rbGenericoSim.Name = "rbGenericoSim";
+            this.rbGenericoSim.Size = new System.Drawing.Size(76, 30);
+            this.rbGenericoSim.TabIndex = 26;
+            this.rbGenericoSim.TabStop = true;
+            this.rbGenericoSim.Text = "Sim";
+            this.rbGenericoSim.UseVisualStyleBackColor = true;
+            // 
+            // txtCodigo
+            // 
+            this.txtCodigo.Location = new System.Drawing.Point(17, 37);
+            this.txtCodigo.Name = "txtCodigo";
+            this.txtCodigo.ReadOnly = true;
+            this.txtCodigo.Size = new System.Drawing.Size(254, 20);
+            this.txtCodigo.TabIndex = 43;
+            // 
+            // lblCodigo
+            // 
+            this.lblCodigo.AutoSize = true;
+            this.lblCodigo.Font = new System.Drawing.Font("BankGothic Md BT", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCodigo.Location = new System.Drawing.Point(12, 9);
+            this.lblCodigo.Name = "lblCodigo";
+            this.lblCodigo.Size = new System.Drawing.Size(106, 25);
+            this.lblCodigo.TabIndex = 42;
+            this.lblCodigo.Text = "Código";
+            // 
             // CadastroRemedios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(551, 385);
+            this.ClientSize = new System.Drawing.Size(558, 437);
+            this.Controls.Add(this.txtCodigo);
+            this.Controls.Add(this.lblCodigo);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.gbSolido);
@@ -366,5 +389,7 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.RadioButton rbGenericoNao;
         private System.Windows.Forms.RadioButton rbGenericoSim;
+        private System.Windows.Forms.TextBox txtCodigo;
+        private System.Windows.Forms.Label lblCodigo;
     }
 }
