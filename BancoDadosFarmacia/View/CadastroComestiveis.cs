@@ -15,7 +15,7 @@ namespace View
 {
     public partial class CadastroComestiveis : Form
     {
-        System.Text.RegularExpressions.Regex num = new System.Text.RegularExpressions.Regex("[^A-z]");
+        Regex num = new Regex("[^A-z]");
 
         public CadastroComestiveis()
         {
@@ -94,21 +94,19 @@ namespace View
         private void txtNome_Leave(object sender, EventArgs e)
         {
             
-            if(num.IsMatch(this.txtNome.Text))
+            if(num.IsMatch(txtNome.Text))
             {
                 MessageBox.Show("Nome deve conter somente caracteres");
                 txtNome.Focus();
-                return;
             }
         }
 
         private void txtMarca_Leave(object sender, EventArgs e)
         {
-            if (num.IsMatch(this.txtMarca.Text))
+            if (num.IsMatch(txtMarca.Text))
             {
                 MessageBox.Show("Marca deve conter somente caracteres");
                 txtMarca.Focus();
-                return;
             }
         }
     }
